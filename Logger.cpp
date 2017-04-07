@@ -2129,7 +2129,7 @@ int Logger::maxbotix_Serial_parse(int Ex){
     }
   }
   Serial.end();
-  Serial.begin(38400);
+  Serial.begin(115200);
   // Convert to integer
   char r2[4]; // range stripped of all of its extra characters
   for (int i=1; i<5; i++){
