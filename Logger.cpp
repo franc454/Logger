@@ -332,7 +332,7 @@ void Logger::initialize(char* _logger_name, char* _datafilename, \
   // SERIAL //
   ////////////
 
-  Serial.begin(38400);
+  Serial.begin(115200);
 
   /////////////////////////////
   // Logger models and setup //
