@@ -421,7 +421,7 @@ void Logger::setupLogger(){
   // SERIAL //
   ////////////
 
-  Serial.begin(38400);
+  Serial.begin(115200);
 
   announce_start(); // Announce start
 
