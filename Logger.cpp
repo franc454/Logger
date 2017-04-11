@@ -1704,6 +1704,9 @@ void Logger::HM1500LF_humidity_with_external_temperature(int humidPin, \
 // MaxBotix ruggedized standard size ultrasonic rangefinder: 
 // 1 cm = 1 10-bit ADC interval
 //////////////////////////////////////////////////////////////
+void Logger::GPSdata(string c){
+	datafile.print(c)
+}
 
 void Logger::ultrasonicMB_analog_1cm(int nping, int Ex, int sonicPin, bool writeAll){
 
