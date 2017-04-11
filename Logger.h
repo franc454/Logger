@@ -107,6 +107,7 @@ class Logger {
     bool get_use_sleep_mode();
     
     // Sensors - standard procedure (wake up, log, sleep)
+	
     float readPin(int pin);
     float readPinOversample(int pin, int bits);
     float analogReadOversample(int pin, uint8_t adc_bits=10, int nsamples=1, \
@@ -115,6 +116,7 @@ class Logger {
           int thermPin, uint8_t ADC_resolution_nbits=14, \
           bool Rref_on_GND_side=true, bool oversample_debug=false, bool record_results=true);
     // Print order: Distance [cm], standard deviation [cm]
+    void GPSdata(char c);
     void ultrasonicMB_analog_1cm(int nping, int EX, int sonicPin, \
          bool writeAll);
     float maxbotixHRXL_WR_Serial(int Ex, int nping, bool writeAll, \
