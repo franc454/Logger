@@ -1706,7 +1706,7 @@ void Logger::HM1500LF_humidity_with_external_temperature(int humidPin, \
 //////////////////////////////////////////////////////////////
 char Logger::GPSdata(char c){
 	datafile.print(c);
-	Serial.print(c)
+	Serial.print(c);
 }
 
 void Logger::ultrasonicMB_analog_1cm(int nping, int Ex, int sonicPin, bool writeAll){
