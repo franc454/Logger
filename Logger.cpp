@@ -3354,7 +3354,7 @@ float Logger::Honeywell_HSC_analog(int pin, float Vsupply, float Vref, \
 
 }
 
-void Logger::UltimateGPS(){
+void Logger::UltimateGPS(){{
 	  // connect at 115200 so we can read the GPS fast enuf and
   // also spit it out
   Serial.begin(115200);
@@ -3395,7 +3395,7 @@ void Logger::UltimateGPS(){
   useInterrupt(true);
   
   delay(1000);
-
+}
 
 // Interrupt is called once a millisecond, looks for any new GPS data, and stores it
 SIGNAL(TIMER0_COMPA_vect) {
