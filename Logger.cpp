@@ -3354,7 +3354,7 @@ float Logger::Honeywell_HSC_analog(int pin, float Vsupply, float Vref, \
 
 }
 
-void Logger::UltimateGPS(){{
+void Logger::UltimateGPS(){
 	  // connect at 115200 so we can read the GPS fast enuf and
   // also spit it out
   Serial.begin(115200);
@@ -3422,7 +3422,8 @@ void useInterrupt(boolean v) {
     usingInterrupt = false;
   }
 }
-}
+
+
 
 void Logger::vdivR(int pin, float Rref, uint8_t ADC_resolution_nbits, bool Rref_on_GND_side){
   /**
