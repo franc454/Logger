@@ -55,6 +55,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Arduino 1.0 libraries now default; no if/else
 #include <Arduino.h>
 
+#include <Adafruit_GPS.h>
+SoftwareSerial mySerial(3, 2);
+Adafruit_GPS GPS(&mySerial);
+#define GPSECHO  true
+
+// this keeps track of whether we're using the interrupt
+// off by default!
+boolean usingInterrupt = false;
+void useInterrupt(boolean);
+
 // Standard libraries
 #include <SdFat.h>
 #include <Wire.h>
@@ -74,6 +84,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#include <Adafruit_BMP085_U.h>
 //#include <eRCaGuy_NewAnalogRead.h>
 //#include <AtlasNW.h>
+
 
 // Outside of class definitions
 void wakeUpNow();
