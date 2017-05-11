@@ -169,7 +169,7 @@ class Logger {
     float Honeywell_HSC_analog(int pin, float Vsupply, float Vref, \
           float Pmin, float Pmax, int TransferFunction_number, int units, \
           uint8_t ADC_resolution_nbits=14);
-    char UltimateGPS(char data);
+    void UltimateGPS();
 
   private:
     void pinUnavailable(int pin);
