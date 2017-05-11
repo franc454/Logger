@@ -90,8 +90,10 @@ void _internalDateTime(uint16_t* date, uint16_t* time); // Callback: SD DT stamp
 class Logger {
 
   public:
-    SoftwareSerial mySerial(11, 12);
-    Adafruit_GPS GPS(&mySerial);
+    int pinIn = 11;
+    int pinOut = 12;
+    SoftwareSerial mySerial(pinIn, pinOut);
+    Adafruit_GPS GPS(mySerial);
     #define GPSECHO  true
 
     // this keeps track of whether we're using the interrupt
