@@ -76,14 +76,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#include <AtlasNW.h>
 
 #include <Adafruit_GPS.h>
-SoftwareSerial mySerial(11, 12);
-Adafruit_GPS GPS(&mySerial);
-#define GPSECHO  true
 
-// this keeps track of whether we're using the interrupt
-// off by default!
-boolean usingInterrupt = false;
-void useInterrupt(boolean);
 
 
 // Outside of class definitions
@@ -97,6 +90,15 @@ void _internalDateTime(uint16_t* date, uint16_t* time); // Callback: SD DT stamp
 class Logger {
 
   public:
+    SoftwareSerial mySerial(11, 12);
+    Adafruit_GPS GPS(&mySerial);
+    #define GPSECHO  true
+
+    // this keeps track of whether we're using the interrupt
+    // off by default!
+    boolean usingInterrupt = false;
+    void useInterrupt(boolean);
+	
     // Constructor
     Logger();
     
