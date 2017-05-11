@@ -3400,7 +3400,7 @@ void Logger::UltimateGPS(){
 // Interrupt is called once a millisecond, looks for any new GPS data, and stores it
 SIGNAL(TIMER0_COMPA_vect) {
   char c = GPS.read();
-  datafile.println(c)
+  datafile.println(c);
   // if you want to debug, this is a good time to do it!
   if (GPSECHO)
     if (c) UDR0 = c;  
