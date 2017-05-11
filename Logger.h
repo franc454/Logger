@@ -116,7 +116,6 @@ class Logger {
           int thermPin, uint8_t ADC_resolution_nbits=14, \
           bool Rref_on_GND_side=true, bool oversample_debug=false, bool record_results=true);
     // Print order: Distance [cm], standard deviation [cm]
-    char GPSdata(char c);
     void ultrasonicMB_analog_1cm(int nping, int EX, int sonicPin, \
          bool writeAll);
     float maxbotixHRXL_WR_Serial(int Ex, int nping, bool writeAll, \
